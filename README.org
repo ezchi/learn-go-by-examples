@@ -1,1 +1,32 @@
 * My journey of learning Go
+This journey start with follow https://go.dev/doc/tutorial/.
+
+** Hello World
+*** Create the directory
+#+begin_src sh
+  mkdir hello
+#+end_src
+
+#+RESULTS:
+
+*** Enable dependency tracking for the code
+To enable the tracking by create the =go.mod= file, run the =go mod
+init= command as below with =example/hello= as name of this example
+code.
+
+#+begin_src sh :dir ./hello
+  go mod init example/hello
+#+end_src
+
+*** First code
+The first hello world code is in [[file:hello/main.go][hello/main.go]]
+
+*** Run the first code with =go run= command
+#+begin_src sh :dir ./hello :results org
+  go run .
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+Hello, World!
+#+end_src

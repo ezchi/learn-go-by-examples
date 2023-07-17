@@ -1,15 +1,16 @@
 * My journey of learning Go
 This journey start with follow https://go.dev/doc/tutorial/.
 
-** Hello World
-*** Create the directory
+** Getting started
+*** Hello World
+**** Create the directory
 #+begin_src sh
   mkdir hello
 #+end_src
 
 #+RESULTS:
 
-*** Enable dependency tracking for the code
+**** Enable dependency tracking for the code
 To enable the tracking by create the =go.mod= file, run the =go mod
 init= command as below with =example/hello= as name of this example
 code.
@@ -18,10 +19,10 @@ code.
   go mod init example/hello
 #+end_src
 
-*** First code
+**** First code
 The first hello world code is in [[file:hello/main.go][hello/main.go]]
 
-*** Run the first code with =go run= command
+**** Run the first code with =go run= command
 #+begin_src sh :dir ./hello :results org
   go run .
 #+end_src
@@ -30,3 +31,6 @@ The first hello world code is in [[file:hello/main.go][hello/main.go]]
 #+begin_src org
 Hello, World!
 #+end_src
+
+*** Call code in external package
+This session will learn how to add external package as example and call code in that package.

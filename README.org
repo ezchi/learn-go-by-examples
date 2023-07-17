@@ -81,7 +81,14 @@ Hi, Gladys. Welcome!
 #+begin_src sh :dir hello :results org
   go run .
 #+end_src
+** Return a random greeting
+*** Add random greeting message to [[file:greetings/greetings.go::package greetings][greetings/greetings.go]]
+*** Run the code
+#+begin_src sh :dir hello :results org
+  go run .
+#+end_src
 
 #+RESULTS:
 #+begin_src org
+Great to see you, Glady!
 #+end_src

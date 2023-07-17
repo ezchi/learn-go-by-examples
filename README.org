@@ -34,3 +34,43 @@ Hello, World!
 
 *** Call code in external package
 This session will learn how to add external package as example and call code in that package.
+
+** Create a Go module
+
+*** Start a module that others can use
+
+**** Create greating directory
+#+begin_src sh
+  mkdir -p greetings
+#+end_src
+
+#+RESULTS:
+
+**** Initialize module
+#+begin_src sh :dir greetings
+  go mod init example.com/greetings
+#+end_src
+
+#+RESULTS:
+
+**** Add example code to [[file:greetings/greetings.go::package greetings][greetings.go]]
+
+*** Call code from another module
+**** Add example code to [[file:hello/main.go::package main][hello/main.go]]
+**** Replace module with local module
+#+begin_src sh :dir hello
+  go mod edit -replace example.com/greetings=../greetings
+#+end_src
+**** Tidy go.mod
+#+begin_src sh :dir hello
+  go mod tidy
+#+end_src
+**** Run the new code
+#+begin_src sh :dir hello :results org
+  go run .
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+Hi, Gladys. Welcome!
+#+end_src

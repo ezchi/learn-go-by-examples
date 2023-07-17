@@ -92,3 +92,4 @@ Hi, Gladys. Welcome!
 #+begin_src org
 Great to see you, Glady!
 #+end_src
+** Return greetings for multiple people

@@ -74,3 +74,14 @@ This session will learn how to add external package as example and call code in 
 #+begin_src org
 Hi, Gladys. Welcome!
 #+end_src
+** Return and handle an error
+*** Add return error to [[file:greetings/greetings.go::package greetings][greetings.go]]
+*** Add error handle to [[file:hello/main.go::package main][hello/main.go]]
+*** Run the code
+#+begin_src sh :dir hello :results org
+  go run .
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+#+end_src

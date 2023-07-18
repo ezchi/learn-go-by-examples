@@ -108,3 +108,13 @@ Great to see you, Glady!
 PASS
 ok  	example.com/greetings	0.005s
 #+end_src
+
+** Compile and install the application
+*** Compile the application
+#+begin_src sh :dir hello
+  go build
+#+end_src
+*** Install the application
+#+begin_src sh :dir hello
+  go install
+#+end_src

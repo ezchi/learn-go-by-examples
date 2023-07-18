@@ -93,3 +93,18 @@ Hi, Gladys. Welcome!
 Great to see you, Glady!
 #+end_src
 ** Return greetings for multiple people
+** Add a test
+*** Run test
+#+begin_src sh :dir greetings :results org
+  go test -v
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+=== RUN   TestHelloName
+--- PASS: TestHelloName (0.00s)
+=== RUN   TestHelloEmpty
+--- PASS: TestHelloEmpty (0.00s)
+PASS
+ok  	example.com/greetings	0.005s
+#+end_src

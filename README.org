@@ -118,3 +118,44 @@ ok  	example.com/greetings	0.005s
 #+begin_src sh :dir hello
   go install
 #+end_src
+
+** Accessing a relational database
+[[https://go.dev/doc/tutorial/database-access]]
+*** Create a folder
+#+begin_src sh
+  mkdir -p workspaces/data-access/
+#+end_src
+
+#+begin_src sh :dir workspaces/data-access
+  go mod init example/data-access
+#+end_src
+
+Add data-access to workspaces
+#+begin_src sh :dir workspaces
+  go work use data-access
+#+end_src
+
+*** Setup a database
+:PROPERTIES:
+:header-args:sh+: :dir workspaces/data-access
+:END:
+#+begin_src sh
+  mysql -u root -p
+#+end_src
+
+#+RESULTS:
+*** Get a database handle and connect
+:PROPERTIES:
+:header-args:sh+: :dir workspaces/data-access
+:END:
+Use =root= without password
+#+begin_src sh
+  export DBUSER="root"
+  export DBPASS=""
+  go run .
+#+end_src
+
+#+RESULTS:
+: Connected!
+
+*** Query multiple rows
